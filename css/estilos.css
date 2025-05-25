@@ -1,0 +1,157 @@
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body {
+    margin: auto;
+    padding: auto;
+    width: 90vw;
+
+}
+
+header {
+    width: 100%;
+
+}
+
+nav {
+    background-color: rgb(22, 52, 219);
+    height: 5vh;
+}
+
+header nav ul {
+    display: flex;
+    justify-content: space-evenly;
+
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    position: relative;
+    color: white;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #ffff00;
+}
+
+a::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: -10%;
+    height: 2px;
+    width: 0%;
+    transition: width 0.3s ease;
+    background-color: #ffff00;
+    ;
+}
+
+a:hover::after {
+    width: 120%;
+}
+
+
+main {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    justify-content: space-evenly;
+    gap: 10px;
+}
+
+.tarjeta {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid black;
+    width: 230px;
+    height: 100px;
+    border-radius: 20px;
+}
+
+span {
+    align-content: center;
+    width: 100%;
+}
+
+label {
+    display: block;
+}
+
+section {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 90vh;
+}
+
+.seccion {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+
+}
+
+th {
+    margin-left: 100px;
+}
+
+.activarPestaña {
+    display: block;
+}
+
+.btnAcciones {
+    background-color: transparent;
+    border: 0px;
+    cursor: pointer;
+    padding: auto;
+    font-size: 1.3rem;
+    transition: 0.5s ease-in-out;
+}
+
+.btnAcciones:hover {
+    scale: 1.2;
+}
+
+
+/* Estilo del fondo del modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Contenido del modal */
+.modal-content {
+    background-color: white;
+    margin: 15% auto;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    text-align: center;
+}
+
+.close {
+    float: right;
+    font-size: 20px;
+    cursor: pointer;
+}

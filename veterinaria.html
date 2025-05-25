@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a id="btn-inicio">Inicio</a></li>
+                <li><a id="btn-mascotas">Mascotas</a></li>
+                <li><a id="btn-clientes">Clientes</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="inicio">
+        <main>
+            <div class="tarjeta">
+                <h3>Enfermos</h3>
+                <span id="t-enfermos">0</span>
+            </div>
+            <div class="tarjeta">
+                <h3>En tratamiento</h3>
+                <span id="t-tratamiento">0</span>
+            </div>
+            <div class="tarjeta ">
+                <h3>Sanos</h3>
+                <span id="t-sanos">0</span>
+            </div>
+        </main>
+    </section>
+    <section id="clientes">
+        <div class="seccion">
+            <form id="new_cliente" action="">
+                <h2>Clientes</h2>
+                <label for="nombre_cliente">Nombre:
+                    <input type="text" name="nombre_cliente" id="nombre_cliente" placeholder="">
+                </label>
+                <label for="cedula">Cedula:
+                    <input type="number" name="cedula" id="cedula" placeholder="">
+                </label>
+                <label for="telefono">Telefono:
+                    <input type="number" name="telefono" id="telefono" placeholder="">
+                </label>
+                <label for="correo">Correo:
+                    <input type="email" name="correo" id="correo" placeholder="">
+                </label>
+                <button type="button" id="btn-new-cliente">Crear nuevo cliente</button>
+
+            </form>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nombre</th>
+                        <th>Cedula</th>
+                        <th>Telefono</th>
+                        <th>Correo</th>
+                        <th>Mascotas</th>
+                    </tr>
+                </thead>
+                <tbody id="listar-clientes">
+
+                </tbody>
+                <tfoot>
+
+                </tfoot>
+            </table>
+        </div>
+    </section>
+    <section id="mascotas">
+        <div class="seccion">
+            <form id="new_mascota" action="">
+                <h2>Mascotas</h2>
+                <label for="nombre_mascota">Nombre:
+                    <input type="text" name="nombre_mascota" id="nombre_mascota" placeholder="" required>
+                </label>
+                <label for="especie">Especie:
+                    <input type="text" name="especie" id="especie" placeholder="" required>
+                </label>
+                <label for="edad">Edad:
+                    <input type="number" name="edad" id="edad" placeholder="" required>
+                </label>
+                <label for="peso">Peso:
+                    <input type="number" name="peso" id="peso" placeholder="" required>
+                </label>
+                <label for="estado">Estados:
+                    <select id="estado" required>
+                        <option value="">Seleccionar cliente</option>
+                        <option value="Enfermo">Enfermo</option>
+                        <option value="En tratamiento">En tratamiento</option>
+                        <option value="Sano">Sano</option>
+                    </select>
+                </label>
+                <label for="dueno">C.C Dueño:
+                    <input list="listaClientes" type="number" name="dueño" id="id_cliente"
+                        placeholder="Seleccionar cliente" required>
+                    <datalist id="listaClientes">
+                    </datalist>
+                </label>
+                <button type="button" id="btn-new-mascota">Crear nueva mascota</button>
+            </form>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nombre</th>
+                        <th>Especie</th>
+                        <th>Edad</th>
+                        <th>Peso</th>
+                        <th>Estado</th>
+                        <th>C.C Dueño</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="listar-mascotas">
+
+                </tbody>
+                <tfoot>
+
+                </tfoot>
+            </table>
+        </div>
+
+    </section>
+
+    <div id="miModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="cerrarModal()">&times;</span>
+            <p>¡Hola! Esta es una ventana emergente.</p>
+        </div>
+    </div>
+
+</body>
+<script src="veterinario.js"></script>
+<script src="botones.js"></script>
+
+</html>

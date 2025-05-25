@@ -20,6 +20,7 @@ class Veterinaria {
     }
 
     agregar_cliente(datos) {
+        
         if (!this.clientes.has(datos.cedula)) {
             const nuevoCliente = new Cliente(this.clientes.size, datos.nombre, datos.cedula, datos.telefono, datos.correo);
             this.clientes.set(datos.cedula, nuevoCliente);

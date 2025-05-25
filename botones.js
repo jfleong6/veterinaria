@@ -29,7 +29,7 @@ function agregar_mascota() {
         estado: document.getElementById("estado").value,
         id_cedula: Number(document.getElementById("id_cliente").value.trim())
     };
-    
+
     tiendaVeterinaria.agregar_mascota(datos);
     document.getElementById("new_mascota").reset();
 
@@ -44,8 +44,12 @@ function activarPestaña(pestana, btn) {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-    document.getElementById("btn-new-cliente").addEventListener("click", agregar_cliente);
-    document.getElementById("btn-new-mascota").addEventListener("click", agregar_mascota);
+    document.getElementById("btn-new-cliente").addEventListener("click", function () {
+        setTimeout(agregar_cliente, 1500);
+    });
+    document.getElementById("btn-new-mascota").addEventListener("click", function () {
+        setTimeout(agregar_mascota, 2000);
+    });
     btnInicio.addEventListener("click", () => {
         activarPestaña(pestanaInicio, btnInicio);
     });
